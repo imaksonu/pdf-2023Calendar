@@ -12,6 +12,7 @@
         h1 {text-align: center;}
 p {text-align: center;}
 div {text-align: center;}
+h4 {text-align: center;}
 
 .center {
   margin: auto;
@@ -51,6 +52,15 @@ div {text-align: center;}
     height: 150px;
   }
 }
+
+
+
+
+
+
+
+
+
 
 
 /* CSS */
@@ -127,7 +137,7 @@ div {text-align: center;}
 
 h1 {
     margin-top: 40px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Lucida Handwriting";
   font-size: 40px;
   font-weight: bold;
   color: #fff;
@@ -135,6 +145,93 @@ h1 {
   letter-spacing: 5px;
   text-shadow: 3px 3px 20px #ff99cc,
     -2px 1px 30px #ff99cc;
+}
+h4{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
+
+
+
+/* CSS */
+.center {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  padding: 25px;
+  margin-top:8%;
+}
+
+.center:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-center {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.center:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.white-text-with-blue-shadow {
+  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+  color: white;
+  font-size: 1.1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -144,17 +241,21 @@ h1 {
 </head>
 <body>
 
-    <h1>C&IT 2023 CALENDAR</h1>
+    
 
 
 
 
         <div class="center">
-            <img src="RSP_C&IT_2023_Calendar (1)_page-0001.jpg" class="calender_img" alt="calender image"><br><br><br>
+            <h1>C&IT 2023 CALENDAR</h1>
 
-            <a href="https://imaksonu.github.io/pdf-2023Calendar/RSP_C&IT_2023_Calendar.pdf"><button class="button-85" role="button">Download Now</button></a><br>
+            <h4 class="white-text-with-blue-shadow">C&IT family wishing you a happy and prosperous new year.</h4>
+
+            <br><br><br>
+            <a href="https://imaksonu.github.io/pdf-2023Calendar/RSP_C&IT_2023_Calendar.pdf" download=""><button class="button-85" role="button">Download Calendar</button></a><br>
 
         </div>
+
 
 </body>
 </html>
